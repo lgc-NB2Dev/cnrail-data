@@ -1,7 +1,8 @@
-import httpx
-from bs4 import BeautifulSoup, Tag
 import zipfile
 from pathlib import Path
+
+import httpx
+from bs4 import BeautifulSoup, Tag
 
 
 def get_dpkg_url(data_url: str) -> str:
