@@ -30,4 +30,4 @@ def convert_trains():
                 "train_no": train_no,
             },
         )
-    TRAIN_FILE.write_text(json.dumps(train_data, ensure_ascii=False, indent=4), "UTF-8")
+    TRAIN_FILE.write_text(json.dumps(train_data, ensure_ascii=False), "UTF-8")

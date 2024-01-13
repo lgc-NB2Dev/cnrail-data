@@ -13,6 +13,6 @@ def update_alias():
                 continue
             train_alias.append({splits[0][: -(len(splits[1]))] + splits[1]: splits[0]})
     ALIAS_FILE.write_text(
-        json.dumps(train_alias, ensure_ascii=False, indent=4),
+        json.dumps(train_alias, ensure_ascii=False),
         "UTF-8",
     )
