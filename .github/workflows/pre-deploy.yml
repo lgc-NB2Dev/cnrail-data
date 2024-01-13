@@ -36,7 +36,7 @@ jobs:
 
       # Pre deploy
       - name: Run pre-deploy.sh
-        run: sh scripts/pre-deploy.sh
+        run: sh scripts/pre_deploy.sh
       - name: Format with Prettier
         run: prettier -c -w data/*
       - name: Commit changes
