@@ -38,7 +38,7 @@ jobs:
       - name: Run pre-deploy.sh
         run: sh scripts/pre_deploy.sh
       - name: Format with Prettier
-        run: prettier -c -w data/*
+        run: prettier -c -w .
       - name: Commit changes
         run: |
           git config user.name github-actions[bot]
