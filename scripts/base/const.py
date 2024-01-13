@@ -11,3 +11,10 @@ ADMINISTRATOR_DATA_FILE = TMP_PATH / "000_ddj.json"
 DATA_PATH = ROOT_PATH / "data"
 TRAIN_FILE = DATA_PATH / "train.json"
 ALIAS_FILE = DATA_PATH / "alias.json"
+
+
+def const_ready():
+    if not TMP_PATH.exists():
+        TMP_PATH.mkdir(parents=True, exist_ok=True)
+    if not DATA_PATH.exists():
+        DATA_PATH.mkdir(parents=True, exist_ok=True)
