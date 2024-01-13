@@ -49,4 +49,4 @@ jobs:
           git branch -m data
           git add .
           git commit -m "pre deploy" -a || exit 0
-          git push
+          git push --set-upstream origin data
