@@ -1,4 +1,3 @@
-from pathlib import Path
 from zipfile import ZipFile
 
 import httpx
@@ -25,7 +24,6 @@ def get_data_url(xml_file: AnyHttpUrl) -> str:
 
 def ready():
     data_url = get_data_url(SMSKB_DATA_URl)
-    assert data_url
     response = httpx.get(data_url)
     response.raise_for_status()
     TMP_FILE.write_bytes(response.content)
