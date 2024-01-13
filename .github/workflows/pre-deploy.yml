@@ -41,11 +41,11 @@ jobs:
         run: prettier -c -w data/*
       - name: Commit changes
         run: |
-          git config user.name github-actions[bot]
-          git config user.email github-actions[bot]@users.noreply.github.com
           cd data
           git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote add origin "https://github.com/lgc-NB2Dev/cnrail-data.git"
-          git checkout -b data
+          git branch -m data
           git commit -m "pre deploy" -a || exit 0
           git push
