@@ -40,9 +40,12 @@ jobs:
       - name: Format with Prettier
         run: prettier -c -w data/*
       - name: Commit changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          message: "🎉 update: data upgrade"
-          branch: "data"
-          directory: "data"
+        run: \
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          cd data
+          git init
+          git remote add origin "https://github.com/lgc-NB2Dev/cnrail-data.git"
+          git checkout -b data
+          git commit -m "pre deploy" -a || exit 0
+          git push
