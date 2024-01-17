@@ -11,6 +11,7 @@ ADMINISTRATOR_DATA_FILE = TMP_PATH / "000_ddj.json"
 DATA_PATH = ROOT_PATH / "data"
 TRAIN_FILE = DATA_PATH / "train.json"
 ALIAS_FILE = DATA_PATH / "alias.json"
+MAINTANCE_FILE = DATA_PATH / "maintance.json"
 
 
 def const_ready():
