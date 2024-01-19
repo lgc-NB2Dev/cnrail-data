@@ -163,3 +163,4 @@ cython_debug/
 
 # temp dir
 tmp/
+.vercel
